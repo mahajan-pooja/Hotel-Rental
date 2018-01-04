@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<title>Papakea Resort</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://mahajan-pooja.github.io/Hotel-Rental/rental.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="icon" href="logo.png" type="image/png" sizes="16x16">
+
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", Arial, Helvetica, sans-serif}
+.mySlides {display:none}
+</style>
+<body class="content border-left border-right">
+
+<!-- Sidebar/menu -->
+<nav class="sidebar light-grey collapse top" style="z-index:3;width:260px" id="mySidebar">
+  <div class="container display-container padding-16">
+    <i onclick="w3_close()" class="fa fa-remove hide-large button transparent display-topright"></i>
+    <h3>Rental starts</h3>
+    <h3>from $99</h3>
+    <h6>per night</h6>
+    <hr>
+    <form action="/action_page.php" target="_blank">
+      <p><label><i class="fa fa-calendar-check-o"></i> Check In</label></p>
+      <input class="input border" type="text" placeholder="DD MM YYYY" name="CheckIn" required>          
+      <p><label><i class="fa fa-calendar-o"></i> Check Out</label></p>
+      <input class="input border" type="text" placeholder="DD MM YYYY" name="CheckOut" required>         
+      <p><label><i class="fa fa-male"></i> Adults</label></p>
+      <input class="input border" type="number" value="1" name="Adults" min="1" max="6">              
+      <p><label><i class="fa fa-child"></i> Kids</label></p>
+      <input class="input border" type="number" value="0" name="Kids" min="0" max="6">
+      <p><button class="button block green left-align" type="submit"><i class="fa fa-search margin-right"></i> Search availability</button></p>
+    </form>
+  </div>
+  <div class="bar-block">
+    <a href="#apartment" class="bar-item button padding-16"><i class="fa fa-building"></i>Papakea Resort</a>
+    <a href="javascript:void(0)" class="bar-item button padding-16" onclick="document.getElementById('subscribe').style.display='block'"><i class="fa fa-rss"></i> Subscribe</a>
+    <a href="#contact" class="bar-item button padding-16"><i class="fa fa-envelope"></i> Contact</a>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header class="bar top hide-large black xlarge">
+  <span class="bar-item">Rental</span>
+  <a href="javascript:void(0)" class="right bar-item button" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+</header>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="overlay hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="main white" style="margin-left:260px">
+
+  <!-- Push down content on small screens -->
+  <div class="hide-large" style="margin-top:80px"></div>
+
+  <!-- Slideshow Header -->
+  <div class="container" id="apartment">
+    <h2 class="text-green">Papakea Resort</h2>
+    <div class="display-container mySlides">
+    <img src="img1.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="display-bottomleft container black">
+        <p>BedRoom</p>
+      </div>
+    </div>
+    <div class="display-container mySlides">
+    <img src="img2.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="display-bottomleft container black">
+        <p>Spa Room</p>
+      </div>
+    </div>
+    <div class="display-container mySlides">
+    <img src="img3.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="display-bottomleft container black">
+        <p>Living Room</p>
+      </div>
+    </div>
+    <div class="display-container mySlides">
+    <img src="img4.jpg" style="width:100%;margin-bottom:-6px">
+      <div class="display-bottomleft container black">
+        <p>BedRoom II</p>
+      </div>
+    </div>
+  </div>
+  <div class="row-padding section">
+    <div class="col s3">
+      <img class="demo opacity hover-opacity-off" src="img1.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(1)" title="Living room">
+    </div>
+    <div class="col s3">
+      <img class="demo opacity hover-opacity-off" src="img2.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(2)" title="Dining room">
+    </div>
+    <div class="col s3">
+      <img class="demo opacity hover-opacity-off" src="img3.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(3)" title="Bedroom">
+    </div>
+    <div class="col s3">
+      <img class="demo opacity hover-opacity-off" src="img4.jpg" style="width:100%;cursor:pointer" onclick="currentDiv(4)" title="Second Living Room">
+    </div>
+  </div>
+
+  <div class="container">
+    <h4><strong>The space</strong></h4>
+    <div class="row large">
+      <div class="col s6">
+        <p><i class="fa fa-fw fa-male"></i> Max people: 4</p>
+        <p><i class="fa fa-fw fa-bath"></i> Bathrooms: 2</p>
+        <p><i class="fa fa-fw fa-bed"></i> Bedrooms: 1</p>
+      </div>
+      <div class="col s6">
+        <p><i class="fa fa-fw fa-clock-o"></i> Check In: After 3PM</p>
+        <p><i class="fa fa-fw fa-clock-o"></i> Check Out: 12PM</p>
+      </div>
+    </div>
+    <hr>
+    
+    <h4><strong>Amenities</strong></h4>
+    <div class="row large">
+      <div class="col s6">
+        <p><i class="fa fa-fw fa-shower"></i> Shower</p>
+        <p><i class="fa fa-fw fa-wifi"></i> WiFi</p>
+        <p><i class="fa fa-fw fa-tv"></i> TV</p>
+      </div>
+      <div class="col s6">
+        <p><i class="fa fa-fw fa-cutlery"></i> Kitchen</p>
+        <p><i class="fa fa-fw fa-thermometer"></i> Heating</p>
+        <p><i class="fa fa-fw fa-wheelchair"></i> Accessible</p>
+      </div>
+    </div>
+    <hr>
+    
+    <h4><strong>Extra Information</strong></h4>
+    <p>Aston at Papakea Resort on Maui's Kaanapali Coast is a relaxing haven on 13 acres of expansive lawns and lush gardens. We offer spacious condominium accommodations overlooking the crystal blue Pacific.<br>
+
+    All guest studios, one, two and three bedroom suites at Aston at Papakea Resort come with fully equipped kitchens and in-room washer/dryers for extra convenience. You'll have a private furnished balcony or lanai, where you can relax on your own or with friends and family and enjoy spectacular ocean or garden views. All condominiums are air-conditioned, and complimentary WiFi is offered throughout the resort.</p>
+    <p>We accept: <i class="fa fa-credit-card large"></i> <i class="fa fa-cc-mastercard large"></i> <i class="fa fa-cc-amex large"></i> <i class="fa fa-cc-cc-visa large"></i><i class="fa fa-cc-paypal large"></i></p>
+    <hr>
+    
+    <h4><strong>Rules</strong></h4>
+    <p>1. Advanced Purchase/Non-Refundable Rates - <br>
+Full prepayment is required for this reservation, your credit card will be charged immediately.<br><br>
+
+2. Cancellation Policy - <br>
+
+If you cancel for any reason, attempt to modify this reservation, or do not arrive on the specified check-in date, payment is non-refundable. At check in, the front desk will verify your check-out date. Rates quoted are based on check-in date and length of stay. Should you choose to depart early, price is subject to change.<br><br>
+
+3. Modification of Reservation - <br>
+
+Modifications to your reservation are not permitted. However, a request to cancel an existing Advanced Purchase/Non-Refundable reservation may be permitted if, at the time you are requesting a change, a new Advanced Purchase/Non-Refundable reservation at the same property is booked (subject to availability).<br>
+
+For any modifications/changes to the reservation, you will be charged a change fee of $50.00 USD plus any difference in room charges and applicable taxes. If the new charges are lower than the original reservation, there will not be any refunds. For a cancellation and rebooking to be considered, you must contact the property to request a reservation change no less than three days prior to your scheduled check-in date.<br><br>
+
+4. Early Departure - <br>
+
+If you depart early for any reason, you will not receive any credit or refund.<br><br>
+
+5. Extending Your Stay - <br>
+
+Extensions will require a new reservation for the additional date(s). This is subject to availability and prevailing rates, and the existing rate shall not apply.<br><br>
+
+6. Other Restrictions - <br>
+
+Advanced Purchase/Non-Refundable rates are not combinable with any other offers and promotions and is not available to groups.<br><br></p>
+    <p>Subscribe to receive updates on available dates and special offers.</p>
+    <p><button class="button green third" onclick="document.getElementById('subscribe').style.display='block'">Subscribe</button></p>
+  </div>
+  <hr>
+  
+  <!-- Contact -->
+  <div class="container" id="contact">
+    <h2>Contact</h2>
+    <i class="fa fa-map-marker" style="width:30px"></i> San Jose, CA<br>
+    <i class="fa fa-phone" style="width:30px"></i> Phone: +1607 232 9877<br>
+    <i class="fa fa-envelope" style="width:30px"> </i> Email: poojamahajan2092@gmail.com<br>
+    <p>Questions? Go ahead, ask them:</p>
+    <form action="/action_page.php" target="_blank">
+      <p><input class="input border" type="text" placeholder="Name" required name="Name"></p>
+      <p><input class="input border" type="text" placeholder="Email" required name="Email"></p>
+      <p><input class="input border" type="text" placeholder="Message" required name="Message"></p>
+    <button type="submit" class="button green third">Send a Message</button>
+    </form>
+  </div>
+  
+  <footer class="container padding-16" style="margin-top:32px;text-align: center;">Copyright © Pooja Mahajan</footer>
+
+<!-- End page content -->
+</div>
+
+<!-- Subscribe Modal -->
+<div id="subscribe" class="modal">
+  <div class="modal-content animate-zoom padding-large">
+    <div class="container white center">
+      <i onclick="document.getElementById('subscribe').style.display='none'" class="fa fa-remove button xlarge right transparent"></i>
+      <h2 class="wide">SUBSCRIBE</h2>
+      <p>Join our mailing list to receive updates on available dates and special offers.</p>
+      <p><input class="input border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="button padding-large green margin-bottom" onclick="document.getElementById('subscribe').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<script>
+// Script to open and close sidebar when on tablets and phones
+function w3_open() {
+    document.getElementById("mySidebar").style.display = "block";
+    document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+    document.getElementById("mySidebar").style.display = "none";
+    document.getElementById("myOverlay").style.display = "none";
+}
+
+// Slideshow Apartment Images
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " opacity-off";
+}
+</script>
+
+</body>
+</html>
